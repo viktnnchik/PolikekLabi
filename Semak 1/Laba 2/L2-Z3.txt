@@ -1,0 +1,44 @@
+// оператор while
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double x = -8.7;
+    while (x <= -5) {
+        double y = 0.5;
+        while (y <= 1.5) {
+            double z = max(pow(y, 1.0 / 3.0), x + y);
+            cout << "x = " << x << ", y = " << y << ", z = " << z << endl;
+            y += 0.8;
+        }
+        x += 2.4;
+    }
+    return 0;
+}
+//Поставь звездочку на Github https://github.com/viktnnchik
+
+
+// оператор do while
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double x = -8.7;
+    do {
+        double y = 0.5;
+        do {
+            double z = max(pow(y, 1.0 / 3.0), x + y);
+            cout << "x = " << x << ", y = " << y << ", z = " << z << endl;
+            y += 0.8;
+        } while (y <= 1.5);
+        x += 2.4;
+    } while (x <= -5);
+    return 0;
+}
+//Поставь звездочку на Github https://github.com/viktnnchik
+
+

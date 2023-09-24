@@ -1,0 +1,56 @@
+
+// Программа с использованием While
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double x = 0.0;
+    double y = 0.0;
+    while (x <= 0.34) {
+        y = tan(exp(x) + cos(x));
+        cout << "x = " << x << ", y = " << y << endl;
+        x += 0.06;
+    }
+    return 0;
+}
+
+// Программа с использованием For
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double y = 0.0;
+    for (double x = 0.0; x <= 0.34; x += 0.06) {
+        y = tan(exp(x) + cos(x));
+        cout << "x = " << x << ", y = " << y << endl;
+    }
+    return 0;
+}
+
+
+
+// Программа с использованием Do while
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double x = 0.0;
+    double y = 0.0;
+    do {
+        y = tan(exp(x) + cos(x));
+        cout << "x = " << x << ", y = " << y << endl;
+        x += 0.06;
+    } while (x <= 0.34);
+    return 0;
+}
+
+//Поставь звездочку на Github https://github.com/viktnnchik
+

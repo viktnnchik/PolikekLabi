@@ -1,0 +1,34 @@
+#include <iostream>
+#include <fstream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    const int n = 6;
+    double Y[n] = { 1.2, 2.3, 3.4, 4.5, 5.6, 6.7 };
+    double sum = 0;
+
+    for (int i = 0; i < n; i++) {
+        sum += i * pow(Y[i], 3) + sin(Y[i]);
+    }
+
+    cout << "Sum: " << sum << endl;
+
+    ofstream file("result.txt");
+    if (file.is_open()) {
+        file << "Array Y: ";
+        for (int i = 0; i < n; i++) {
+            file << Y[i] << " ";
+        }
+        file << endl;
+        file << "Sum: " << sum << endl;
+        file.close();
+    }
+    else {
+        cout << "Unable to open file" << endl;
+    }
+
+    return 0;
+}
+//Поставь звездочку на Github https://github.com/viktnnchik
